@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --min-bg: #e5e8ee;
+  --white: #fff;
+  --second-color: #0e121a;
+  --primary-color: #171c26;
+  --blue: #386bf7;
+  --text-color: #38404d;
+  -color: #272039;
+  --color-red: #d82148;
+  --color-green: #00c897;
+  --color-purple: #8a39e1;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--min-bg);
+}
+/* heading */
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--min-bg);
+}
+.drap {
+  width: 100%;
+  max-width: 500px;
+  padding: 30px 30px;
+  background: var(--second-color);
+  border-radius: 20px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  /* display: none; */
+}
+.drap .title {
+  font-size: 1.9em;
+  color: #fff;
+  font-weight: 500;
+}
+.drap .eInput {
+  margin-top: 10px;
+  position: relative;
+}
+.drap .eInput input {
+  width: 100%;
+  height: 50px;
+  border-radius: 50px;
+  padding-left: 50px;
+  outline: none;
+  border: none;
+  background: var(--primary-color);
+  color: var(--min-bg);
+}
+.drap .eInput i {
+  position: absolute;
+  left: 20px;
+  top: 16px;
+  color: var(--min-bg);
+}
+
+.drap .notepad {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 100%;
+  max-width: 500px;
+  overflow: auto;
+}
+.drap .notepad::-webkit-scrollbar {
+  width: 0px;
+}
+.drap .notepad .notes {
+  width: 200%;
+  padding: 30px 30px;
+  background: var(--white);
+  margin: 10px 0;
+  border-radius: 20px;
+}
+.drap .notepad .notes .note-title {
+  font-weight: 500;
+  font-size: 1.3em;
+  margin-bottom: 1.3rem;
+  color: var(--second-color);
+}
+.drap .notepad .notes .note-sub {
+  color: var(--text-color);
+  font-weight: 500;
+  white-space: pre-wrap;
+  overflow: hidden;
+}
+.drap .notepad .notes .c5 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.drop .notepad .notes .c5 .category .cat {
+  padding: 8px 20px;
+  border: 2px solid var(--text-color);
+  border-radius: 8px;
+  color: var(--text-color);
+  font-weight: 500;
+  user-select: none;
+  cursor: pointer;
+}
+.drop .notepad .notes .c5 .created-date {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.drop .notepad .notes .c5 .created-date .date {
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 15px;
+}
+.drap {
+  position: relative;
+}
+.drap .notepad .tabs {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.drap .notepad .tabs .add i {
+  float: right;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  background: var(--blue);
+  border-radius: 50%;
+  font-size: 1.4em;
+  line-height: 50px;
+  text-align: center;
+  box-shadow: 0 2px 2px var(--blue);
+  cursor: pointer;
+}
+
+/* ecrire note */
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  background: var(--white);
+  padding: 30px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+.container .eInput input {
+  width: 100%;
+  height: 50px;
+  outline: none;
+  border: none;
+  font-size: 1.9em;
+  font-weight: 500;
+  color: var(-color);
+}
+.container .return i {
+  font-size: 2em;
+  color: var(--text-color);
+  cursor: pointer;
+}
+.container .input {
+  margin-top: 20px;
+}
+.container .input textarea {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  border-left: 3px solid var(--blue);
+  resize: none;
+}
+.container .input #submit {
+  width: 125px;
+  height: 50px;
+  border: none;
+  outline: none;
+  font-size: 1.3em;
+  border-radius: 5px;
+  font-weight: 500;
+  color: var(--white);
+  cursor: pointer;
+  box-shadow: 0 1px 1px var(--blue);
+  background: var(--blue);
+  position: relative;
+  left: 300px;
+}
+.select .select_content .c1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.select .select_content .c1 .categories {
+  font-weight: 500;
+  color: var(--blue);
+  user-select: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+  border: 2px solid var(--blue);
+}
+.select .add_cat {
+  margin-top: 20px;
+}
+.select .add_cat .cat_input input {
+  width: 100%;
+  max-width: 200px;
+  height: 50px;
+  padding-left: 20px;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid var(--blue);
+  caret-color: var(--blue);
+}
+.colors .color-tab {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.colors .color-tab .color-set {
+  width: 50px;
+  height: 50px;
+  background: none;
+  /* border: 1px solid #333; */
+  border-radius: 50%;
+  margin: 0 20px;
+  cursor: pointer;
+}
+#red {
+  background: #d82148;
+}
+#green {
+  background-color: #00c897;
+}
+#purple {
+  background-color: #8a39e1;
+}
+#blue {
+  background-color: #386bf7;
+}
+/* active */
+#text-field {
+  transition: all 0.3s cubic-bezier(1, 0.62, 0.49, 0.54);
+}
+/* active */
+#text-field.red {
+  border-color: var(--color-red);
+}
+#text-field.blue {
+  border-color: var(--blue);
+}
+#text-field.green {
+  border-color: var(--color-green);
+}
+#text-field.purple {
+  border-color: var(--color-purple);
+}
+.wrapper .content .notepad {
+  margin: 80px 0;
+  margin-top: 8px;
+} /* to be added after create-element in javascript  */
+.tweet {
+  margin-top: 20px;
+}
+.tweet .tweet_content a {
+  text-decoration: none;
+  color: var(--blue);
+  font-weight: 500;
+}
